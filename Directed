@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+public class Directed
+{
+public static void main(String [] args) throws Exception
+{
+Map<Integer, List<Integer>> adjList = new HashMap<>();
+
+Scanner input = new Scanner(new File("graph2.txt"));
+while(input.hasNextInt())
+{
+int from = input.nextInt();
+int to = input.nextInt();
+
+if(!adjList.containsKey(from))
+{
+adjList.put(from, new ArrayList<>());
+}
+if(!adjList.containsKey(to))
+{
+adjList.put(to, new ArrayList<>());
+}
+
+adjList.get(from).add(to);
+
+}
+
+input.close();
+
+System.out.println("Directed Graph(Adjacency List): ");
+for(int x : adjList.keySet())
+{
+System.out.println(x + " -> " + adjList.get(x));
+}
+}
+}
