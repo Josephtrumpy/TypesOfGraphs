@@ -1,0 +1,35 @@
+import java.util.*;
+import java.io.*;
+
+public class Undirected
+{
+    public static void main(String [] args) throws Exception
+    {
+        Scanner input = new Scanner(new File("graph3.txt"));
+        
+        int n = input.nextInt();
+        int[][] matrix = new int[n][n];
+
+        while(input.hasNextInt())
+        {
+            int v1 = input.nextInt();
+            int v2 = input.nextInt();
+            int weight = input.nextInt();
+
+            matrix[v1][v2] = weight;
+            matrix[v2][v1] = weight;
+        }
+        input.close();
+
+        System.out.println("Undirected ");
+        for(int lcv =0;lcv < n;lcv++)
+        {
+            for(int lcv2 =0; lcv2<n;lcv++)
+            {
+                System.out.println(matrix[lcv][lcv2] + "");
+
+            }
+            System.out.println();
+        }
+    }
+}
