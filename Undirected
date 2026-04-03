@@ -24,9 +24,9 @@ public class Undirected
         System.out.println("Undirected ");
         for(int lcv =0;lcv < n;lcv++)
         {
-            for(int lcv2 =0; lcv2<n;lcv++)
+            for(int lcv2 =0; lcv2<n;lcv2++)
             {
-                System.out.println(matrix[lcv][lcv2] + "");
+                System.out.print(matrix[lcv][lcv2] + "");
 
             }
             System.out.println();
