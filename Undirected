@@ -26,7 +26,7 @@ public class Undirected
         {
             for(int lcv2 =0; lcv2<n;lcv2++)
             {
-                System.out.print(matrix[lcv][lcv2] + "");
+                System.out.print(matrix[lcv][lcv2] + " ");
 
             }
             System.out.println();
